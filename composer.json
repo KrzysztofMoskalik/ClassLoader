@@ -1,0 +1,23 @@
+{
+    "name": "krzysztof-moskalik/class-loader",
+    "license": "MIT",
+    "type": "project",
+    "description": "Simple tool to load all classes from given directory",
+    "keywords": ["Class loader"],
+    "authors": [
+        {
+            "name": "Krzysztof Moskalik",
+            "email": "kontakt@krzysztof-moskalik.pl",
+            "homepage": "https://krzysztof-moskalik.pl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "gnugat/nomo-spaco": "^0.4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "KrzysztofMoskalik\\ClassLoader\\": "./"
+        }
+    }
+}
