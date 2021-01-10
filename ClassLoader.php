@@ -30,7 +30,7 @@ class ClassLoader {
         $objects = [];
 
         foreach ($classes as $class) {
-            $reflectionClass = new ReflectionClass($class);
+            $reflectionClass = new \ReflectionClass($class);
             if ($reflectionClass->isAbstract() || $reflectionClass->isInterface()) {
                 continue;
             }
