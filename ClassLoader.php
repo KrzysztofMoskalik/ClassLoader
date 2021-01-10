@@ -31,7 +31,7 @@ class ClassLoader {
 
         foreach ($classes as $class) {
             $reflectionClass = new ReflectionClass($class);
-            if ($class->isAbstract() || $class->isInterface()) {
+            if ($reflectionClass->isAbstract() || $reflectionClass->isInterface()) {
                 continue;
             }
             
