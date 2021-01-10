@@ -30,6 +30,11 @@ class ClassLoader {
         $objects = [];
 
         foreach ($classes as $class) {
+            $reflectionClass = new ReflectionClass($class);
+            if ($class->isAbstract() || $class->isInterface()) {
+                continue;
+            }
+            
             $object = new $class(...$arguments);
             if ($parent !== null && !($object instanceof $parent)) {
                 continue;
