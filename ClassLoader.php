@@ -39,7 +39,11 @@ class ClassLoader {
             if ($parent !== null && !($object instanceof $parent)) {
                 continue;
             }
-            $objects[] = $object;
+            if ($object instanceof \Stringable) {
+                $objects[(string) $object] = $object;
+            } else {
+                $objects[] = $object;
+            }
         }
 
         return $objects;
